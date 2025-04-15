@@ -4,7 +4,7 @@
 
 ## Business Understanding
 
-The film industry is characterized by significant financial investment and protracted production schedules. Contemporary film budgets can vary dramatically, spanning from $1 million for independent productions to exceeding $1.5 billion for major studio releases and take years to release. Investors are primarily concerned with recouping these substantial costs and generating profit. Therefore, understanding the determinants of box office revenue is essential. This study investigates the elements that significantly influence a film's commercial performance.
+The film industry is characterized by significant financial investment and protracted production schedules. Contemporary film budgets can vary dramatically, spanning from $1 million for independent productions to exceeding $300 million for major studio releases and take years to release. Investors are primarily concerned with recouping these substantial costs and generating profit. Therefore, understanding the determinants of box office revenue is essential. This study investigates the elements that significantly influence a film's commercial performance.
 
 ## Data Understanding
 
@@ -29,3 +29,27 @@ For each individual value that impact more than 1% of the dataset we create a bo
 ## Model
 
 We created over 20 models using different techniques learned during the program. Through the process we saw that having only numeric values with polynomial feature 2 would give us good results as well as using all the data with one hot encoder and standard scale so we prepared multiple models to compare the results. We tried to use Tfidf for the text columns but did not get good results. We used an adjusted R2 to compare the models as the models may have different feature count. The best model we found, that did not overfit, was a Random Forest model with max depth 5, one hot encoder, and polynomial features degree 2 with an adjusted R2 of 0.569304.
+
+The elements that affect box office revenue positively in order are: 
+
+1. Budget
+2. Release_year
+3. Vote_count
+4. Runtime
+5. Popularity
+6. Vote_average
+7. Production company is from the United States
+8. It's available in English
+9. The original language is English
+10. Genres: Action, Comedy, Family, Fantasy, Animation, Thriller, Romance in that order
+11. Production company: Universal Pictures, Paramount, 20th Century Fox, Columbia Pictures, Walt Disney Pictures, New Line Cinema, in that order
+12. It's a sequel
+13. Has keywords: During Credit Stinger, Based on a Novel or Book, After Credits Stinger, Musical, California
+14. Release months: June, December, July
+
+The elements that affect box office revenue negatively in order are: 
+
+1. Genres: Drama, Documentary, in that order
+2. Release months: September, April, January, October, in that order
+3. Original language: Spanish, French, Russian, Turkish, Italian, in that order
+4. Production Countries: Spain, India, France, Russia, Italy, Turkey, in that order
