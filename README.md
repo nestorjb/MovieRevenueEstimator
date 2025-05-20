@@ -28,7 +28,7 @@ For each individual value that impact more than 1% of the dataset we create a bo
 
 ## Model
 
-We created over 20 models using different techniques learned during the program. Through the process we saw that having only numeric values with polynomial feature 2 would give us good results as well as using all the data with one hot encoder and standard scale so we prepared multiple models to compare the results. We tried to use Tfidf for the text columns but did not get good results. We used an adjusted R2 to compare the models as the models may have different feature count. The best model we found, that did not overfit, was a Random Forest model with max depth 5, one hot encoder, and polynomial features degree 2 with an adjusted R2 of 0.569304.
+We created 27 models using different techniques learned during the program. Through the process we saw that having only numeric values with polynomial feature 2 would give us good results as well as using all the data with one hot encoder and standard scale so we prepared multiple models to compare the results. We used Tfidf and Bert for the text columns but the model did not improve. We used an adjusted R2 to compare the models as the models may have different feature counts. The best model we found, that did not overfit, was a Random Forest model with max depth 5, one hot encoder, and polynomial features degree 2 with an adjusted R2 of 0.636748.
 
 The elements that affect box office revenue positively in order are: 
 
